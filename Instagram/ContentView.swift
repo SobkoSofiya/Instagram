@@ -49,17 +49,47 @@ struct ContentView: View {
                 }
             }.padding(.leading,32)
             .padding(.trailing,32)
-        ScrollView(){
-       
+            ScrollView(.vertical){
+            VStack(alignment:.leading){
+                HStack(spacing:20){
+            Image(uiImage: "https://do-slez.com/uploads/posts/2020-09/1599082886_1.jpg".load()).resizable().frame(width: 40, height: 40, alignment: .center)
+                    Text("inna.gosteva")
+                        .font(.custom("", size: 15))
+                }.padding(.leading)
             ForEach(n.gymn, id:  \.self){ stroke in
-                VStack(alignment:.leading){
+                VStack(alignment:.leading, spacing: 15){
                 Image(uiImage: (stroke.img).load())
                     .resizable()
-                    .frame(width: 350 , height: 350, alignment: .center)
-                Text("Hahaahahah")
+                    .frame(width: UIScreen.main.bounds.width , height: 450, alignment: .center)
+                    VStack(alignment:.leading){
+                    HStack(spacing:15){
+                    Image(systemName: "heart")
+                        .resizable()
+                        .frame(width: 25, height: 20, alignment: .center)
+                        Image(systemName: "message")
+                            .resizable()
+                            .frame(width: 25, height: 20, alignment: .center)
+                        Image(systemName: "paperplane")
+                            .resizable()
+                            .frame(width: 25, height: 20, alignment: .center)
+                        
+                        
+                    }.padding(.top,5)
+                    .padding(.bottom,5)
+                    Text("710 просмотров ▪︎ Нравится kris и еще 61")
+                    .font(.custom("Roboto", size: 14)).bold()
+                        HStack{
+                            Text("inna.gosteva")
+                                .font(.custom("Roboto", size: 14)).bold()
+                            Text("Маникюр не зря называют визитной карточкой девушки, ведь по состоянию рук можно определить: кем она работает и чем занимается Самые счастливые девушки, как правило, имеют самый ухоженный маникюр Никогда не забывайте о маникюре. Руки – второй, что бросается в глаза после лица; Ухоженные руки, как точка в конце предложения. Всегда дополняют целостный образ Маникюр может много рассказать о человеке. Если в его жизни непорядок, поверьте, его руки будут в таком же состоянии"
+                               )
+                        }
+                   
+               
+                    }.padding(.leading)
                 }
                     
-                
+            }
             }
         }
         }
