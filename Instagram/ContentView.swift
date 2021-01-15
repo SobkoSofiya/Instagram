@@ -30,6 +30,7 @@ struct ContentView: View {
     @State var h = History()
     @State var er = false
     var body: some View {
+        
         ScrollView{
 //        NavigationView{
         VStack{
@@ -41,6 +42,7 @@ struct ContentView: View {
                     Image(uiImage: (stroke.imag).load())
                         
                         
+                        
                         .resizable()
                         
                         .frame(width: 60 , height: 60, alignment: .center)
@@ -50,6 +52,7 @@ struct ContentView: View {
                 }
             }.padding(.leading,32)
             .padding(.trailing,32)
+            
             ScrollView(.vertical){
             VStack(alignment:.leading){
                 HStack(spacing:20){
